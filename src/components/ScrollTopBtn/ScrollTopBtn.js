@@ -16,13 +16,13 @@ const ScrollTopBtn = () => {
 
 const ScrollTopBtnStyled = styled.button`
   position: fixed;
-  z-index: 10;
   right: 160px;
   top: 50%;
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  z-index: 10;
 `
 
 export default ScrollTopBtn
