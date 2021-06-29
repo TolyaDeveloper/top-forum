@@ -6,7 +6,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home page | Top forum 2021" />
-      fgdg
     </Layout>
   )
 }

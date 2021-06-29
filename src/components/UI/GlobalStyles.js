@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     display: inline-block;
     color: inherit;
+    text-decoration: none;
   }
   
   p,
