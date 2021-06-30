@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { BgImage } from "gbimage-bridge"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import "../UI/Slider/slick.css"
 import { NextArrow, PrevArrow } from "../UI/Slider/SliderArrows"
 
 const BannerSection = () => {

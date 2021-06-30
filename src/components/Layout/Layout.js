@@ -1,6 +1,7 @@
 import React from "react"
 import '../UI/fonts.css'
 import GlobalStyles from "../UI/GlobalStyles"
+import '../UI/Slider/slick.css'
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import ScrollTopBtn from "../ScrollTopBtn/ScrollTopBtn"
