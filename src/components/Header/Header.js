@@ -16,6 +16,23 @@ const Header = () => {
               <NavList>
                 <NavItem>
                   <Link to="/sponsors">Sponsors</Link>
+                  <NavListNested>
+                    <NavItemNested>
+                      <Link to="/sponsors/general-sponsor">General Sponsor</Link>
+                    </NavItemNested>
+                    <NavItemNested>
+                      <Link to="/sponsors/platinum-sponsor">Platinum Sponsor</Link>
+                    </NavItemNested>
+                    <NavItemNested>
+                      <Link to="/sponsors/high-tech-sponsor">High-Tech Sponsor</Link>
+                    </NavItemNested>
+                    <NavItemNested>
+                      <Link to="/sponsors/gold-sponsor">Gold Sponsor</Link>
+                    </NavItemNested>
+                    <NavItemNested>
+                      <Link to="/sponsors/silver-night-sponsor">Silver Night Sponsor</Link>
+                    </NavItemNested>
+                  </NavListNested>
                 </NavItem>
                 <NavItem>
                   <Link to="/exhibitors">Exhibitors</Link>
@@ -71,10 +88,13 @@ const Header = () => {
 }
 
 const HeaderTop = styled.div`
+  position: relative;
   background-color: #323232;
+  z-index: 2;
 `
 
 const HeaderTopInner = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +102,24 @@ const HeaderTopInner = styled.div`
 
 const NavList = styled.ul`
   display: flex;
-  transform: translateX(-20px);
-  overflow: hidden;
+`
+
+const NavListNested = styled.ul`
+  position: absolute;
+  top: 67px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  z-index: 9999;
+  width: 290px;
+  min-height: 240px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all .3s ease;
 `
 
 const NavItem = styled.li`
+  position: relative;
   a {
     position: relative;
     padding: 20px;
@@ -98,6 +131,11 @@ const NavItem = styled.li`
       background-color: #212121;
     }
   }
+  &:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
   & + & {
     a:before {
       content: '';
@@ -108,6 +146,17 @@ const NavItem = styled.li`
       width: 1px;
       height: 35px;
       background-color: #474747;
+    }
+  }
+`
+
+const NavItemNested = styled.li`
+  a {
+    display: block;
+    color: #323232;
+    padding: 10px 20px;
+    &:hover {
+      background-color: #d6d6d6;
     }
   }
 `

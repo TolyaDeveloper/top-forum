@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 
 const Logo = () => {
   return (
-    <Link className="logo" to="/">
+    <Link to="/">
       <StaticImage
         src="../../images/icons/logo.png" alt="main logo"
         width={165}
