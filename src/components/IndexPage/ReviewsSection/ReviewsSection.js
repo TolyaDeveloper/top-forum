@@ -5,11 +5,12 @@ import Container from "../../UI/Container"
 import Slider from "react-slick"
 import {graphql, useStaticQuery} from "gatsby"
 import ReviewsSlide from "./ReviewsSlide/ReviewsSlide"
+import { NextArrow, PrevArrow } from "../../UI/Slider/SliderArrows"
 
 const ReviewsSection = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/reviews/"}}) {
         nodes {
           frontmatter {
             quote
@@ -37,7 +38,9 @@ const ReviewsSection = () => {
 
   const sliderSettings = {
     slidesToShow: 2,
-    infinite: false
+    infinite: false,
+    nextArrow: <NextArrow $color="#c99c47" />,
+    prevArrow: <PrevArrow $color="#c99c47" />,
   }
 
   return (

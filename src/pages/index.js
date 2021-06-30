@@ -4,6 +4,8 @@ import Seo from "../components/Seo/Seo"
 import BannerSection from "../components/IndexPage/BannerSection"
 import InfoSection from "../components/IndexPage/InfoSection"
 import ReviewsSection from "../components/IndexPage/ReviewsSection/ReviewsSection"
+import PromoVideo from "../components/IndexPage/PromoVideo"
+import ClientsSection from "../components/IndexPage/ClientsSection/ClientsSection"
 
 const IndexPage = () => {
   return (
@@ -12,6 +14,8 @@ const IndexPage = () => {
       <BannerSection />
       <InfoSection />
       <ReviewsSection />
+      <PromoVideo />
+      <ClientsSection />
     </Layout>
   )
 }

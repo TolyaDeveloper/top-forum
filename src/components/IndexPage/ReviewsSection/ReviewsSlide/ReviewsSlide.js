@@ -3,21 +3,19 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import NoPhotoReview from "../../../NoPhotoReview/NoPhotoReview"
 
-const ReviewsSlide = props => {
-  const {date, personName, quote} = props.data
-  const imageExists = props.data.featuredImage
+const ReviewsSlide = ({data}) => {
+  const {date, personName, quote, featuredImage} = data
 
   return (
     <div>
       <ReviewsItem>
-        {imageExists
+        {featuredImage
           ? <GatsbyImage
             alt={personName}
-            image={getImage(imageExists)}
+            image={getImage(featuredImage)}
             imgStyle={ReviewsImageStyles}
           />
           : <NoPhotoReview />}
-
         <ReviewsCommentBlock>
           <ReviewsCommentName>{personName}</ReviewsCommentName>
           <ReviewsDateLabel>{date}</ReviewsDateLabel>
