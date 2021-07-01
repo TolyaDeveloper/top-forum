@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../../components/Layout/Layout"
 import Seo from "../../components/Seo/Seo"
-import AllSponsors from "../../components/SponsorsPage/AllSponsors"
+import AllExhibitors from "../../components/ExhibitorsPage/AllExhibitors"
 
 const Index = () => {
   return (
     <Layout>
-      <Seo title="Our all sponsors | Top forum 2021" />
-      <AllSponsors />
+      <Seo title="Our all exhibitors | Top forum 2021" />
+      <AllExhibitors />
     </Layout>
   )
 }

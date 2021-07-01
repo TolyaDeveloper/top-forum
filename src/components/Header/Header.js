@@ -8,7 +8,7 @@ import Logo from "../UI/Logo"
 
 const Header = () => {
   return (
-    <header>
+    <HeaderStyled>
       <HeaderTop>
         <Container>
           <HeaderTopInner>
@@ -16,23 +16,7 @@ const Header = () => {
               <NavList>
                 <NavItem>
                   <Link to="/sponsors">Sponsors</Link>
-                  <NavListNested>
-                    <NavItemNested>
-                      <Link to="/sponsors/general-sponsor">General Sponsor</Link>
-                    </NavItemNested>
-                    <NavItemNested>
-                      <Link to="/sponsors/platinum-sponsor">Platinum Sponsor</Link>
-                    </NavItemNested>
-                    <NavItemNested>
-                      <Link to="/sponsors/high-tech-sponsor">High-Tech Sponsor</Link>
-                    </NavItemNested>
-                    <NavItemNested>
-                      <Link to="/sponsors/gold-sponsor">Gold Sponsor</Link>
-                    </NavItemNested>
-                    <NavItemNested>
-                      <Link to="/sponsors/silver-night-sponsor">Silver Night Sponsor</Link>
-                    </NavItemNested>
-                  </NavListNested>
+
                 </NavItem>
                 <NavItem>
                   <Link to="/exhibitors">Exhibitors</Link>
@@ -83,9 +67,15 @@ const Header = () => {
           </HeaderBottomInner>
         </Container>
       </HeaderBottom>
-    </header>
+    </HeaderStyled>
   )
 }
+
+const HeaderStyled = styled.header`
+  ${props => props.$hasBorderBottom &&`
+    border-bottom: 1px solid #d6d6d6;
+  `}
+`
 
 const HeaderTop = styled.div`
   position: relative;
@@ -102,20 +92,6 @@ const HeaderTopInner = styled.div`
 
 const NavList = styled.ul`
   display: flex;
-`
-
-const NavListNested = styled.ul`
-  position: absolute;
-  top: 67px;
-  background-color: #fff;
-  border: 1px solid #d6d6d6;
-  z-index: 9999;
-  width: 290px;
-  min-height: 240px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100px);
-  transition: all .3s ease;
 `
 
 const NavItem = styled.li`
@@ -150,16 +126,7 @@ const NavItem = styled.li`
   }
 `
 
-const NavItemNested = styled.li`
-  a {
-    display: block;
-    color: #323232;
-    padding: 10px 20px;
-    &:hover {
-      background-color: #d6d6d6;
-    }
-  }
-`
+
 
 const TopHeaderLink = styled(LinkStyled)`
   background-color: #e8d8b6;

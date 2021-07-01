@@ -12,6 +12,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#c99c47`,
+        showSpinner: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
