@@ -1,0 +1,96 @@
+[33mcommit 7a4275320bf43f8da88bebc86b7e1afa29f981c4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Wed Jun 30 18:32:36 2021 +0300
+
+    header popup
+
+[33mcommit 279813d3f5a93a0ecb4ff41c44ae0f43884af468[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Wed Jun 30 17:50:18 2021 +0300
+
+    do index page
+
+[33mcommit 6dfecc56d14ca81d83fd4e50816ffc7fb49fa036[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Wed Jun 30 12:39:14 2021 +0300
+
+    local source graphql for slider review
+
+[33mcommit 97d6b3e2a0aea7af3e618bbe980d040680adfe15[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 20:12:18 2021 +0300
+
+    refactor index page banner component
+
+[33mcommit 5c39977c57568855cca7bb5816ddbba2f1a117b4[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 19:26:20 2021 +0300
+
+    not found page
+
+[33mcommit c6a42fb81adb5bec5ff80b8ab0912d70c26c8987[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 19:00:03 2021 +0300
+
+    amend
+
+[33mcommit 5d8db287b857fd6f92c652db3c65b4e9823f08a8[m
+Merge: 53be2a3 d5f2dda
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:59:24 2021 +0300
+
+    Merge branch 'main' of https://github.com/TolyaDeveloper/top-forum
+
+[33mcommit 53be2a3508a152b679f48e025411472670332b79[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:59:10 2021 +0300
+
+    amend
+
+[33mcommit 0aad387c13767de3eca37e4ebb1c31bdbc8d8a61[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:55:06 2021 +0300
+
+    make scroll to top button
+
+[33mcommit d5f2ddad3c0dfbc3c3fb8283c31594d33fddc278[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:55:06 2021 +0300
+
+    make scroll to top button
+
+[33mcommit 60cd614d7d3c2b81147be5eb8fa5c391c776eb13[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:39:30 2021 +0300
+
+    quick slider arrows fix
+
+[33mcommit 1faed8af56e14ffe160a0aa9bc6e0810b6294e9f[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 18:35:18 2021 +0300
+
+    do top banner with slider
+
+[33mcommit 065115524e4760ff41a452b05700341189735016[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Tue Jun 29 11:29:31 2021 +0300
+
+    finish header and footer component
+
+[33mcommit 91eb05e3ee03716c602ad134a075aa44602e2cd8[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Mon Jun 28 23:23:28 2021 +0300
+
+    unfinished header component
+
+[33mcommit ecdb05cf13da49339b6935839ff4eac821956209[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Mon Jun 28 22:37:18 2021 +0300
+
+    init
+
+[33mcommit 819864a2d64a322ce7f57a3a396b41c7ea3af583[m
+Author: Anatoliy <kabantolyan@gmail.com>
+Date:   Mon Jun 28 21:29:29 2021 +0300
+
+    Initial commit from gatsby: (https://github.com/gatsbyjs/gatsby-starter-default.git)

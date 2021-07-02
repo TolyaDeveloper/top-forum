@@ -64,6 +64,11 @@ const AllSponsorsInner = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 65px 30px;
+  
+  .grid-item-styled {
+    width: 265px;
+    min-height: 355px;
+  }
 `
 
 export default AllSponsors

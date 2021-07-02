@@ -82,7 +82,7 @@ const PresentationBg = styled(BgImage)`
   justify-content: center;
   flex-direction: column;
   min-height: 440px;
-  z-index: -1;
+  z-index: 1;
 `
 
 const PresentationWrapper = styled.div`

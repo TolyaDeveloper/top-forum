@@ -4,23 +4,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Link from "../UI/Link"
 
 const GridRenderItem = ({data, paragraph, relativePath}) => {
-  const {slug, sponsorName, companyName, featuredImage} = data
+  const {slug, sponsorName, companyName, featuredImage, personName, articleTitle} = data
 
   return (
-    <GridItemStyled>
+    <GridItemStyled className="grid-item-styled">
       <div>
         {sponsorName
           ? <GridTitle>{sponsorName}</GridTitle>
           : null}
         <GridImgBlock>
-          <GatsbyImage alt={companyName} image={getImage(featuredImage)} />
+          <GatsbyImage alt={companyName || personName || articleTitle} image={getImage(featuredImage)} />
         </GridImgBlock>
-        <GridName>{companyName}</GridName>
+        {articleTitle
+          ? <GridArticleTitleLink to={`/${relativePath}/${slug}`}>{articleTitle}</GridArticleTitleLink>
+          : <GridName>{companyName || personName}</GridName>}
         <GridInfoText dangerouslySetInnerHTML={{__html: paragraph}} />
       </div>
-      <div>
-        <GridLink to={`/${relativePath}/${slug}`} $pale>Learn more</GridLink>
-      </div>
+      {articleTitle
+        ? null
+        : <div>
+            <GridLink to={`/${relativePath}/${slug}`} $pale>Learn more</GridLink>
+          </div>}
     </GridItemStyled>
   )
 }
@@ -30,8 +34,6 @@ const GridItemStyled = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  width: 265px;
-  min-height: 355px;
 `
 
 const GridTitle = styled.h3`
@@ -44,7 +46,7 @@ const GridTitle = styled.h3`
 const GridImgBlock = styled.div`
   display: grid;
   place-items: center;
-  height: 160px;
+  min-height: 160px;
   margin-bottom: 20px;
   width: 100%;
   border: 1px solid #f3ebda;
@@ -67,6 +69,21 @@ const GridLink = styled(Link)`
   padding: 15px 25px;
   &:hover {
     background-color: #c99c47;
+  }
+`
+
+const GridArticleTitleLink = styled(Link)`
+  margin-bottom: 15px;
+  padding: 0;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+
+  &:hover {
+    color: #c99c47;
+    text-decoration: underline;
   }
 `
 
