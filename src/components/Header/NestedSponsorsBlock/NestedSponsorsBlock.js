@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import {Link} from "gatsby"
 import styled from "styled-components"
 
-const NestedSponsors = () => {
+const NestedSponsorBlock = () => {
   return (
     <NavListNested>
       <NavItemNested>
@@ -15,7 +15,7 @@ const NestedSponsors = () => {
         <Link to="/sponsors/high-tech-sponsor">High-Tech Sponsor</Link>
       </NavItemNested>
       <NavItemNested>
-        <Link to="/sponsors/gold-sponsor">Gold Sponsor</Link>
+        <Link to="/sponsors/marmot-sponsor">Gold Sponsor</Link>
       </NavItemNested>
       <NavItemNested>
         <Link to="/sponsors/silver-night-sponsor">Silver Night Sponsor</Link>
@@ -41,12 +41,12 @@ const NavListNested = styled.ul`
 const NavItemNested = styled.li`
   a {
     display: block;
-    color: #323232;
+    color: #323232!important;
     padding: 10px 20px;
     &:hover {
-      background-color: #d6d6d6;
+      background-color: #d6d6d6!important;
     }
   }
 `
 
-export default NestedLinksBlocks
+export default NestedSponsorBlock

@@ -5,27 +5,28 @@ import Container from "../UI/Container"
 import LinkStyled from "../UI/Link"
 import {StaticImage} from "gatsby-plugin-image"
 import Logo from "../UI/Logo"
+import NestedSponsorsBlock from "./NestedSponsorsBlock/NestedSponsorsBlock"
 
 const Header = () => {
   return (
-    <HeaderStyled>
+    <header>
       <HeaderTop>
         <Container>
           <HeaderTopInner>
             <nav>
               <NavList>
                 <NavItem>
-                  <Link to="/sponsors">Sponsors</Link>
-
+                  <Link to="/sponsors" activeStyle={activeStyles} partiallyActive={true}>Sponsors</Link>
+                  <NestedSponsorsBlock />
                 </NavItem>
                 <NavItem>
-                  <Link to="/exhibitors">Exhibitors</Link>
+                  <Link to="/exhibitors" activeStyle={activeStyles}>Exhibitors</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/speakers">Speakers</Link>
+                  <Link to="/speakers" activeStyle={activeStyles}>Speakers</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/media">Media</Link>
+                  <Link to="/media" activeStyle={activeStyles}>Media</Link>
                 </NavItem>
               </NavList>
             </nav>
@@ -67,15 +68,9 @@ const Header = () => {
           </HeaderBottomInner>
         </Container>
       </HeaderBottom>
-    </HeaderStyled>
+    </header>
   )
 }
-
-const HeaderStyled = styled.header`
-  ${props => props.$hasBorderBottom &&`
-    border-bottom: 1px solid #d6d6d6;
-  `}
-`
 
 const HeaderTop = styled.div`
   position: relative;
@@ -93,6 +88,10 @@ const HeaderTopInner = styled.div`
 const NavList = styled.ul`
   display: flex;
 `
+
+const activeStyles = {
+  backgroundColor: '#212121'
+}
 
 const NavItem = styled.li`
   position: relative;
@@ -126,18 +125,12 @@ const NavItem = styled.li`
   }
 `
 
-
-
 const TopHeaderLink = styled(LinkStyled)`
   background-color: #e8d8b6;
   color: #323232;
 `
 
-const HeaderBottom = styled.div`
-  ${props => props.borderBottom &&`
-    border-bottom: 1px solid #d6d6d6;
-  `}
-`
+const HeaderBottom = styled.div``
 
 const HeaderBottomInner = styled.div`
   display: flex;
