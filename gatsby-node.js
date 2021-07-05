@@ -88,4 +88,26 @@ exports.createPages = async ({graphql, actions}) => {
       }
     })
   })
+
+  const {data: events} = await graphql(`
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/events/"}}) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  events.allMarkdownRemark.nodes.forEach(node => {
+    actions.createPage({
+      path: `/upcoming-events/${node.frontmatter.slug}`,
+      component: path.resolve('./src/templates/event-detail.js'),
+      context: {
+        slug: node.frontmatter.slug
+      }
+    })
+  })
 }
