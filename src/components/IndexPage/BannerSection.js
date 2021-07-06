@@ -21,6 +21,8 @@ const BannerSection = () => {
 
   const pluginImage = getImage(presentationImage)
 
+  console.log('banner render')
+
   const sliderSettings = {
     dots: false,
     infinite: true,

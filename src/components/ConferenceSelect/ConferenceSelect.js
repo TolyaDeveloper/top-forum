@@ -2,15 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import dropdownArrow from '../../images/icons/select-arrow.png'
 
-const ConferenceSelect = ({topText}) => {
+const ConferenceSelect = ({topText, children}) => {
   return (
     <ConferenceSelectStyled>
-      <ConferenceTopText>{topText}</ConferenceTopText>
+      {topText ? <ConferenceTopText>{topText}</ConferenceTopText> : null}
       <SelectForm>
         <CustomSelect>
-          <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM Israel 2021</option>
-          <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM ... 2021</option>
-          <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM ...... 2021</option>
+          {children}
         </CustomSelect>
       </SelectForm>
     </ConferenceSelectStyled>

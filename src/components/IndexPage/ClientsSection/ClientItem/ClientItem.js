@@ -17,6 +17,7 @@ const ClientItem = ({data}) => {
 const ClientsItem = styled.div`
   display: grid;
   place-items: center;
+  margin: 0 auto;
   width: 180px;
   height: 120px;
   background-color: #fff;

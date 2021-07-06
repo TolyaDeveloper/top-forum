@@ -13,6 +13,7 @@ const IndexPage = () => {
       <Seo title="Home page | Top forum 2021" />
       <BannerSection />
       <InfoSection />
+
       <ReviewsSection />
       <PromoVideo />
       <ClientsSection />
