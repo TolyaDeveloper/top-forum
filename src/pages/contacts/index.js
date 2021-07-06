@@ -5,7 +5,7 @@ import MapContacts from "../../components/ContactsPage/MapContacts"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Our contacts | Top forum 2021" />
       <MapContacts />
     </Layout>

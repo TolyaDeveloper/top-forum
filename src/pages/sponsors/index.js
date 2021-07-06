@@ -5,7 +5,7 @@ import AllSponsors from "../../components/SponsorsPage/AllSponsors"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Our all sponsors | Top forum 2021" />
       <AllSponsors />
     </Layout>

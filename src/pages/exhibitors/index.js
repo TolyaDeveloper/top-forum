@@ -5,7 +5,7 @@ import AllExhibitors from "../../components/ExhibitorsPage/AllExhibitors"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Our all exhibitors | Top forum 2021" />
       <AllExhibitors />
     </Layout>

@@ -5,7 +5,7 @@ import AllEvents from "../../components/EventsPage/AllEvents"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Our all events | Top forum 2021" />
       <AllEvents />
     </Layout>

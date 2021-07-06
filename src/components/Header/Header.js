@@ -7,7 +7,7 @@ import {StaticImage} from "gatsby-plugin-image"
 import Logo from "../UI/Logo"
 import NestedSponsorsBlock from "./NestedSponsorsBlock/NestedSponsorsBlock"
 
-const Header = () => {
+const Header = ({headerBorder}) => {
   return (
     <header>
       <HeaderTop>
@@ -34,7 +34,7 @@ const Header = () => {
           </HeaderTopInner>
         </Container>
       </HeaderTop>
-      <HeaderBottom>
+      <HeaderBottom headerBorder={headerBorder}>
         <Container>
           <HeaderBottomInner>
             <HeaderBottomInfo>
@@ -130,7 +130,11 @@ const TopHeaderLink = styled(LinkStyled)`
   color: #323232;
 `
 
-const HeaderBottom = styled.div``
+const HeaderBottom = styled.div`
+  ${props => props.headerBorder &&`
+    border-bottom: 1px solid #d6d6d6;
+  `}
+`
 
 const HeaderBottomInner = styled.div`
   display: flex;

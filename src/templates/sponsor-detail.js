@@ -11,7 +11,7 @@ const SponsorDetail = ({data}) => {
   const {companyName, featuredImage} = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title={companyName} />
       <SponsorDetailStyled>
         <Container>

@@ -9,7 +9,7 @@ const MediaDetail = ({data}) => {
   const {articleTitle, featuredImage} = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title={articleTitle} />
       <Container>
         <h1>Example page</h1>

@@ -9,7 +9,7 @@ const ExhibitorDetail = ({data}) => {
   const {companyName, featuredImage} = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title={companyName} />
       <Container>
         <h1>example page</h1>

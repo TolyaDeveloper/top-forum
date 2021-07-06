@@ -5,7 +5,7 @@ import Registers from "../../components/RegisterPage/Registers"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Register | Top forum 2021" />
       <Registers />
     </Layout>

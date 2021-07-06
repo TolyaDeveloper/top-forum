@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 const SubscribeButton = props => {
-  console.log(props)
-
   return (
     <SubscribeButtonStyled type="button" onClick={props.changeVisibility}>SUBSCRIBE</SubscribeButtonStyled>
   )

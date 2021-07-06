@@ -5,7 +5,7 @@ import AllMedia from "../../components/MediaPage/AllMedia"
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="Our all media articles | Top forum 2021" />
       <AllMedia />
     </Layout>

@@ -9,7 +9,7 @@ const EventDetail = ({data}) => {
   const {featuredImage} = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title="event name" />
       <Container>
         <h1>Example page</h1>

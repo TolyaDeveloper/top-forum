@@ -29,7 +29,7 @@ const ContactsFeedback = () => {
               You can also ask questions by phone of a hot line:
             </p>
             <a className="contact-feedback-tel" href="tel:+421221025322">+421 221 025 322</a>
-            <p className="contact-feedback-with-faq">The answers to many questions already in our <a href="">FAQ</a></p>
+            <p className="contact-feedback-with-faq">The answers to many questions already in our <a href="/faq">FAQ</a></p>
             <p className="contact-feedback-suggestions">
               All suggestions and comments are considered mandatory!
             </p>
@@ -120,6 +120,9 @@ const ContactsFeedbackAdditional = styled.div`
   .contact-feedback-with-faq {
     margin-bottom: 10px;
     font-weight: 400;
+    a {
+      text-decoration: underline;
+    }
   }
 `
 

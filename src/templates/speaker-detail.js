@@ -9,7 +9,7 @@ const SpeakerDetail = ({data}) => {
   const {personName, featuredImage} = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout headerBorder>
       <Seo title={personName} />
       <Container>
         <h1>Example page</h1>

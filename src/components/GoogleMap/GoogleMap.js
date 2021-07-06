@@ -8,7 +8,9 @@ const GoogleMap = () => {
       height={440}
       style={{border: 0, marginRight: '30px'}}
       allowFullScreen=""
-      loading="lazy" />
+      loading="lazy"
+      title="location of forum"
+    />
   )
 }
 

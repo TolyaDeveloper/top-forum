@@ -3,8 +3,12 @@ import styled from "styled-components"
 import Container from "../UI/Container"
 import Title from "../UI/Title"
 import ArrowIcon from '../../images/icons/hint-block-arrow.png'
-import ConferenceSelect from "../ConferenceSelect/ConferenceSelect"
+// import ConferenceSelect from "../ConferenceSelect/ConferenceSelect"
 import { Link } from "gatsby"
+import CheckedIcon from '../../images/icons/checked.svg'
+import LinkStyled from "../UI/Link"
+import VisaImg from '../../images/icons/visa.png'
+import PayPal from '../../images/icons/paypal.png'
 
 const Registers = () => {
   return (
@@ -14,7 +18,7 @@ const Registers = () => {
         <HintBlock>FILL IN THE FORM IN ENGLISH</HintBlock>
         <HintBlockArrow src={ArrowIcon} alt="arrow" />
         <HintBlock>READ THOROUGHLY TERMS&CONDITIONS</HintBlock>
-        <form>
+        <RegistersForm>
           <RegistersLabel>
             <RegistersLabelText>Please, choose a conference:</RegistersLabelText>
             <span>select will be here</span>
@@ -22,25 +26,27 @@ const Registers = () => {
           <RegistersLabel as="div">
             <RegistersLabelText>Please, choose delegate package:</RegistersLabelText>
             <div>
-              <label>
-                <input type="radio" name="package" value="standard" />
-              </label>
-              <label>
-                <input type="radio" name="package" value="premium" />
-              </label>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="package" value="standard" />
+                <span>standard</span>
+              </RegisterRadioLabel>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="package" value="premium" />
+                <span>premium</span>
+              </RegisterRadioLabel>
             </div>
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Name:</RegistersLabelText>
-            <input type="text" />
+            <RegistersInput type="text" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Surname:</RegistersLabelText>
-            <input type="text" />
+            <RegistersInput type="text" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Company Name:</RegistersLabelText>
-            <input type="text" />
+            <RegistersInput type="text" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Business Area:</RegistersLabelText>
@@ -48,49 +54,56 @@ const Registers = () => {
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>E-mail (for organizers):</RegistersLabelText>
-            <input type="email" />
+            <RegistersInput type="email" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>E-mail (for sponsors):</RegistersLabelText>
-            <input type="email" />
+            <RegistersInput type="email" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Mobile Number (for organizers):</RegistersLabelText>
-            <input type="tel" />
+            <RegistersInput type="tel" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Country:</RegistersLabelText>
-            <input type="text" />
+            <RegistersInput type="text" />
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Web-site:</RegistersLabelText>
-            <input type="url" />
+            <RegistersInput type="url" />
           </RegistersLabel>
           <RegistersLabel as="div">
             <RegistersLabelText>Method of payment:</RegistersLabelText>
             <div>
-              <label>
-                <input type="radio" name="payment" value="free" />
-              </label>
-              <label>
-                <input type="radio" name="payment" value="visa" />
-              </label>
-              <label>
-                <input type="radio" name="payment" value="invoice" />
-              </label>
-              <label>
-                <input type="radio" name="payment" value="paypal" />
-              </label>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="payment" value="free" />
+                <span>free</span>
+              </RegisterRadioLabel>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="payment" value="visa" />
+                <span><RegisterRadioImg src={VisaImg} alt="visa payment method" /></span>
+              </RegisterRadioLabel>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="payment" value="invoice" />
+                <span>invoice</span>
+              </RegisterRadioLabel>
+              <RegisterRadioLabel>
+                <RegisterRadioInput type="radio" name="payment" value="paypal" />
+                <span><RegisterRadioImg src={PayPal} alt="paypal payment method" /></span>
+              </RegisterRadioLabel>
             </div>
           </RegistersLabel>
           <RegisterBottom>
-            <label>
-              <input type="checkbox" />
-              <span>I accept <Link to="/terms-and-conditions">Terms&Conditions</Link></span>
-            </label>
-            <button type="submit">SUBMIT</button>
+            <RegisterBottomLabel>
+              <RegisterCheckboxInput type="checkbox" />
+              <RegisterCustomCheckbox />
+              <RegisterCheckboxSpan>I accept&nbsp;
+                <Link to="/terms-and-conditions" style={{textDecoration: 'underline'}}>Terms&Conditions</Link>
+              </RegisterCheckboxSpan>
+            </RegisterBottomLabel>
+            <RegisterSubmit as="button" type="submit">SUBMIT</RegisterSubmit>
           </RegisterBottom>
-        </form>
+        </RegistersForm>
       </Container>
     </RegistersSection>
   )
@@ -123,16 +136,114 @@ const HintBlockArrow = styled.img`
   margin: 0 auto 10px auto;
 `
 
+const RegistersForm = styled.form`
+  max-width: 655px;
+  margin: 40px auto 0 auto;
+`
+
+const RegisterRadioLabel = styled.label`
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  cursor: pointer;
+  
+  span {
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 10px;
+    background-color: #f2ead8;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+`
+
+const RegisterRadioImg = styled.img`
+  max-width: 80px;
+`
+
+const RegisterRadioInput = styled.input`
+  position: absolute;
+  appearance: none;
+  
+  &:checked + span {
+    background-color: #e2cc9d;
+  }
+`
+
+const RegistersInput = styled.input`
+  padding: 0 15px;
+  flex-grow: 1;
+  height: 50px;
+  border: 1px solid #e8d8b6;
+`
+
 const RegistersLabel = styled.label`
   display: flex;
   align-items: center;
-  margin: 0 15px 15px 0;
+  margin-bottom: 15px;
 `
 
 const RegistersLabelText = styled.span`
   width: 220px;
+  flex-shrink: 0;
+  color: #606060;
+  font-weight: 500;
 `
 
-const RegisterBottom = styled.div``
+const RegisterBottom = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 435px;
+  margin-left: auto;
+`
+
+const RegisterCheckboxInput = styled.input`
+  position: absolute;
+  appearance: none;
+  &:checked + span::before {
+    display: block;
+  }
+`
+
+const RegisterBottomLabel = styled.label`
+  position: relative;
+  cursor: pointer;
+`
+
+const RegisterCheckboxSpan = styled.span`
+  padding-left: 30px;
+  color: #606060;
+`
+
+const RegisterCustomCheckbox = styled.span`
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #e8d8b6;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(${CheckedIcon});
+    width: 13px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+  }
+`
+
+const RegisterSubmit = styled(LinkStyled)`
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+`
 
 export default Registers
