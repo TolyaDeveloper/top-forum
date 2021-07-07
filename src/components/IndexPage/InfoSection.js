@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import ContentText from "../UI/ContentText"
 import styled from "styled-components"
 import Container from "../UI/Container"
-import {StaticImage} from "gatsby-plugin-image"
-import Link from "../UI/Link"
-import SubscribeButton from "../UI/SubscribeButton"
+import { StaticImage } from "gatsby-plugin-image"
+import { PostLink, RegisterLink } from "../UI/Links"
+import { SubscribeButton } from '../UI/Buttons'
 import ModalSubscribe from "../ModalSubscribe/ModalSubscribe"
 
 const InfoSection = () => {
@@ -20,9 +19,9 @@ const InfoSection = () => {
     <React.Fragment>
       <InfoSectionStyled>
         <Container>
-          <ContentTextStyled>
+          <ContentText>
             TOP FORUM is an international business communication company. Our main idea is to take your business to the next level. To make this transformation happen you need to have a platform to meet hundreds of new clients and specialists, become aware of new trends and soak up fresh ideas from best experts. It's what we call the forum impact. Face to face communication with like-minded professionals is a personal experience which leads your business to a great success. TOP FORUM business conferences give you the unique opportunity to set new goals, open your new strategy and implement the campaigns that will give you superiority in your industry. Just invest in your future.
-          </ContentTextStyled>
+          </ContentText>
           <InfoInner>
             <InfoCart>
               <div>
@@ -42,7 +41,7 @@ const InfoSection = () => {
                 </InfoText>
               </div>
               <div>
-                <InfoLink to="/" $pale>Learn more</InfoLink>
+                <PostLinkStyled to="/sponsors">Learn more</PostLinkStyled>
                 <InfoBottomAnnouncer>
                   Wealth TOP FORUM Israel 2021
                 </InfoBottomAnnouncer>
@@ -66,7 +65,7 @@ const InfoSection = () => {
                 </InfoText>
               </div>
               <div>
-                <InfoLink to="/" $pale>Learn more</InfoLink>
+                <PostLinkStyled to="/media">Learn more</PostLinkStyled>
                 <InfoBottomAnnouncer>
                   Wealth TOP FORUM Israel 2021
                 </InfoBottomAnnouncer>
@@ -90,7 +89,7 @@ const InfoSection = () => {
                 </InfoText>
               </div>
               <div>
-                <InfoLink to="/" $pale>Learn more</InfoLink>
+                <PostLinkStyled to="/speakers">Learn more</PostLinkStyled>
                 <InfoBottomAnnouncer>
                   Wealth TOP FORUM Israel 2021
                 </InfoBottomAnnouncer>
@@ -98,8 +97,13 @@ const InfoSection = () => {
             </InfoCart>
           </InfoInner>
           <InfoButtonsInner>
-            <Link to="/register" $fixed>REGISTER NOW</Link>
-            <SubscribeButton changeVisibility={changeVisibility} />
+            <RegisterLinkStyled to="/register">REGISTER NOW</RegisterLinkStyled>
+            <SubscribeButton
+              changeVisibility={changeVisibility}
+              onClick={changeVisibility}
+            >
+              SUBSCRIBE
+            </SubscribeButton>
           </InfoButtonsInner>
         </Container>
       </InfoSectionStyled>
@@ -112,8 +116,11 @@ const InfoSectionStyled = styled.section`
   padding: 65px 0 50px 0;
 `
 
-const ContentTextStyled = styled(ContentText)`
+const ContentText = styled.p`
   margin-bottom: 60px;
+  font-size: 17px;
+  line-height: 1.76;
+  text-align-last: center;
 `
 
 const InfoInner = styled.div`
@@ -149,12 +156,12 @@ const InfoText = styled.p`
   line-height: 1.6;
 `
 
-const InfoLink = styled(Link)`
+const PostLinkStyled = styled(PostLink)`
   margin-bottom: 15px;
-  padding: 15px 25px;
-  &:hover {
-    background-color: #c99c47;
-  }
+`
+
+const RegisterLinkStyled = styled(RegisterLink)`
+  margin-right: 15px;
 `
 
 const InfoBottomAnnouncer = styled.p`

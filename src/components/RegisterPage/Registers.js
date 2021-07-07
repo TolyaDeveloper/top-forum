@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Container from "../UI/Container"
 import Title from "../UI/Title"
 import ArrowIcon from '../../images/icons/hint-block-arrow.png'
-// import ConferenceSelect from "../ConferenceSelect/ConferenceSelect"
+import ConferenceSelect from "../ConferenceSelect/ConferenceSelect"
 import { Link } from "gatsby"
 import CheckedIcon from '../../images/icons/checked.svg'
-import LinkStyled from "../UI/Link"
 import VisaImg from '../../images/icons/visa.png'
 import PayPal from '../../images/icons/paypal.png'
+import { SubmitButton } from "../UI/Buttons"
 
 const Registers = () => {
   return (
@@ -21,7 +21,11 @@ const Registers = () => {
         <RegistersForm>
           <RegistersLabel>
             <RegistersLabelText>Please, choose a conference:</RegistersLabelText>
-            <span>select will be here</span>
+            <ConferenceSelect $width="100%" $marginBottom="0">
+              <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM Israel 2021</option>
+              <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM ... 2021</option>
+              <option value="Wealth TOP FORUM Israel 2021">Wealth TOP FORUM ...... 2021</option>
+            </ConferenceSelect>
           </RegistersLabel>
           <RegistersLabel as="div">
             <RegistersLabelText>Please, choose delegate package:</RegistersLabelText>
@@ -50,7 +54,11 @@ const Registers = () => {
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>Business Area:</RegistersLabelText>
-            <span>select will be here</span>
+            <ConferenceSelect $width="100%" $marginBottom="0">
+              <option value="Forex Companies">Forex Companies</option>
+              <option value="...">...</option>
+              <option value="......">......</option>
+            </ConferenceSelect>
           </RegistersLabel>
           <RegistersLabel>
             <RegistersLabelText>E-mail (for organizers):</RegistersLabelText>
@@ -101,7 +109,7 @@ const Registers = () => {
                 <Link to="/terms-and-conditions" style={{textDecoration: 'underline'}}>Terms&Conditions</Link>
               </RegisterCheckboxSpan>
             </RegisterBottomLabel>
-            <RegisterSubmit as="button" type="submit">SUBMIT</RegisterSubmit>
+            <SubmitButton type="submit">SUBMIT</SubmitButton>
           </RegisterBottom>
         </RegistersForm>
       </Container>
@@ -203,6 +211,7 @@ const RegisterBottom = styled.div`
 const RegisterCheckboxInput = styled.input`
   position: absolute;
   appearance: none;
+  
   &:checked + span::before {
     display: block;
   }
@@ -225,6 +234,7 @@ const RegisterCustomCheckbox = styled.span`
   width: 19px;
   height: 19px;
   border: 1px solid #e8d8b6;
+  
   &::before {
     content: '';
     position: absolute;
@@ -238,12 +248,6 @@ const RegisterCustomCheckbox = styled.span`
     background-size: cover;
     display: none;
   }
-`
-
-const RegisterSubmit = styled(LinkStyled)`
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
 `
 
 export default Registers

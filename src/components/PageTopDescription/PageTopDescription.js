@@ -2,14 +2,12 @@ import React from "react"
 import Title from "../UI/Title"
 import styled from "styled-components"
 
-const PageTopDescription = ({title, paragraph}) => {
-  return (
-    <React.Fragment>
-      <PageTopTitle>{title}</PageTopTitle>
-      <PageTopParagraph>{paragraph}</PageTopParagraph>
-    </React.Fragment>
-  )
-}
+const PageTopDescription = ({title, paragraph}) => (
+  <React.Fragment>
+    <PageTopTitle>{title}</PageTopTitle>
+    <PageTopParagraph>{paragraph}</PageTopParagraph>
+  </React.Fragment>
+)
 
 const PageTopTitle = styled(Title)`
   margin-bottom: 20px;

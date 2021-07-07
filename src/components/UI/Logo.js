@@ -1,18 +1,16 @@
 import React from "react"
-import {StaticImage} from "gatsby-plugin-image"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Logo = () => {
-  return (
-    <Link to="/">
-      <StaticImage
-        src="../../images/icons/logo.png" alt="main logo"
-        width={165}
-        height={64}
-        placeholder="tracedSVG"
-      />
-    </Link>
-  )
-}
+const Logo = () => (
+  <Link to="/">
+    <StaticImage
+      src="../../images/icons/logo.png" alt="top forum logo"
+      width={165}
+      height={64}
+      placeholder="tracedSVG"
+    />
+  </Link>
+)
 
 export default Logo

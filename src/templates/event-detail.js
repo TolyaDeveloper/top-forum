@@ -1,7 +1,7 @@
 import React from "react"
 import Seo from "../components/Seo/Seo"
 import Layout from "../components/Layout/Layout"
-import {graphql} from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Container from "../components/UI/Container"
 

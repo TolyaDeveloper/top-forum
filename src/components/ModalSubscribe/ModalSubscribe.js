@@ -1,29 +1,27 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import LinkStyled from "../UI/Link"
 import CloseIcon from '../../images/icons/close-modal.png'
+import { SubmitButton } from "../UI/Buttons"
 
-const ModalSubscribe = props => {
-  return (
-    <ModalSubscribeStyled>
-      <ModalBox>
-        <CloseBtnStyled onClick={props.changeVisibility}>
-          <CloseIconStyled src={CloseIcon} alt="close modal" />
-        </CloseBtnStyled>
-        <ModalBoxTitle>subscribe</ModalBoxTitle>
-        <ModalBoxText>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </ModalBoxText>
-        <form>
-          <ModalInput type="text" required placeholder="NAME AND SURNAME" />
-          <ModalInput type="text" required placeholder="COMPANY NAME" />
-          <ModalInput type="email" required placeholder="E-MAIL" />
-          <ModalSubmit as="button">SUBSCRIBE</ModalSubmit>
-        </form>
-      </ModalBox>
-    </ModalSubscribeStyled>
-  )
-}
+const ModalSubscribe = ({changeVisibility}) => (
+  <ModalSubscribeStyled>
+    <ModalBox>
+      <CloseBtnStyled onClick={changeVisibility}>
+        <CloseIconStyled src={CloseIcon} alt="close modal" />
+      </CloseBtnStyled>
+      <ModalBoxTitle>subscribe</ModalBoxTitle>
+      <ModalBoxText>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </ModalBoxText>
+      <form>
+        <ModalInput type="text" required placeholder="NAME AND SURNAME" />
+        <ModalInput type="text" required placeholder="COMPANY NAME" />
+        <ModalInput type="email" required placeholder="E-MAIL" />
+        <SubmitButtonStyled>SUBSCRIBE</SubmitButtonStyled>
+      </form>
+    </ModalBox>
+  </ModalSubscribeStyled>
+)
 
 const appearModal = keyframes`
   from {
@@ -81,11 +79,9 @@ const ModalInput = styled.input`
   text-align: center;
 `
 
-const ModalSubmit = styled(LinkStyled)`
-  margin-top: 13px;
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
+const SubmitButtonStyled = styled(SubmitButton)`
+  margin: 12px auto 0 auto;
+  min-width: 130px;
 `
 
 const CloseBtnStyled = styled.button`

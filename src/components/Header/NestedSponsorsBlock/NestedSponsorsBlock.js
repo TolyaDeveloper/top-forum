@@ -1,28 +1,26 @@
 import React from "react"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
-const NestedSponsorBlock = () => {
-  return (
-    <NavListNested>
-      <NavItemNested>
-        <Link to="/sponsors/general-sponsor">General Sponsor</Link>
-      </NavItemNested>
-      <NavItemNested>
-        <Link to="/sponsors/platinum-sponsor">Platinum Sponsor</Link>
-      </NavItemNested>
-      <NavItemNested>
-        <Link to="/sponsors/high-tech-sponsor">High-Tech Sponsor</Link>
-      </NavItemNested>
-      <NavItemNested>
-        <Link to="/sponsors/marmot-sponsor">Gold Sponsor</Link>
-      </NavItemNested>
-      <NavItemNested>
-        <Link to="/sponsors/silver-night-sponsor">Silver Night Sponsor</Link>
-      </NavItemNested>
-    </NavListNested>
-  )
-}
+const NestedSponsorBlock = () => (
+  <NavListNested>
+    <NavItemNested>
+      <Link to="/sponsors/general-sponsor">General Sponsor</Link>
+    </NavItemNested>
+    <NavItemNested>
+      <Link to="/sponsors/platinum-sponsor">Platinum Sponsor</Link>
+    </NavItemNested>
+    <NavItemNested>
+      <Link to="/sponsors/high-tech-sponsor">High-Tech Sponsor</Link>
+    </NavItemNested>
+    <NavItemNested>
+      <Link to="/sponsors/marmot-sponsor">Gold Sponsor</Link>
+    </NavItemNested>
+    <NavItemNested>
+      <Link to="/sponsors/silver-night-sponsor">Silver Night Sponsor</Link>
+    </NavItemNested>
+  </NavListNested>
+)
 
 const NavListNested = styled.ul`
   position: absolute;

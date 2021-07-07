@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Container from "../UI/Container"
 import Title from "../UI/Title"
-import LinkStyled from "../UI/Link"
+import { SubmitButton } from "../UI/Buttons"
+import { Link } from "gatsby"
 
 const ContactsFeedback = () => {
   return (
@@ -22,14 +23,14 @@ const ContactsFeedback = () => {
                 <ContactsInput type="text" required />
               </ContactsInputWrapper>
             </label>
-            <ButtonSubmit as="button" type="submit">SEND</ButtonSubmit>
+            <SubmitButtonStyled as="button" type="submit">SEND</SubmitButtonStyled>
           </ContactsFeedbackForm>
           <ContactsFeedbackAdditional>
             <p className="contact-feedback-top">
               You can also ask questions by phone of a hot line:
             </p>
             <a className="contact-feedback-tel" href="tel:+421221025322">+421 221 025 322</a>
-            <p className="contact-feedback-with-faq">The answers to many questions already in our <a href="/faq">FAQ</a></p>
+            <p className="contact-feedback-with-faq">The answers to many questions already in our <Link to="/faq">FAQ</Link></p>
             <p className="contact-feedback-suggestions">
               All suggestions and comments are considered mandatory!
             </p>
@@ -93,14 +94,8 @@ const ContactsInput = styled.input`
   height: 50px;
 `
 
-const ButtonSubmit = styled(LinkStyled)`
-  display: block;
+const SubmitButtonStyled = styled(SubmitButton)`
   margin: 15px 0 0 auto;
-  min-width: 110px;
-  height: 50px;
-  padding: 0 35px;
-  border: none;
-  cursor: pointer;
 `
 
 const ContactsFeedbackAdditional = styled.div`

@@ -8,20 +8,20 @@ import Footer from "../Footer/Footer"
 import ScrollTopBtn from "../ScrollTopBtn/ScrollTopBtn"
 import styled from "styled-components"
 
-const Layout = ({children, headerBorder}) => {
-  return (
-    <FocusVisible className="js-focus-visible focus-visible">
-      <GlobalStyles />
-      <ScrollTopBtn />
-      <Header headerBorder={headerBorder} />
-      <main>{children}</main>
-      <Footer />
-    </FocusVisible>
-  )
-}
+const Layout = ({children, headerBorder}) => (
+  <FocusVisible className="js-focus-visible focus-visible">
+    <GlobalStyles />
+    <ScrollTopBtn />
+    <Header headerBorder={headerBorder} />
+    <main>{children}</main>
+    <Footer />
+  </FocusVisible>
+)
 
 const FocusVisible = styled.div`
-  &.js-focus-visible :focus:not(.focus-visible) {
+  &.js-focus-visible button:focus:not(.focus-visible),
+  &.js-focus-visible a:focus:not(.focus-visible),
+  &.js-focus-visible input[type='checkbox']:focus:not(.focus-visible) {
     outline: none;
   }
 

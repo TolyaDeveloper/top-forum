@@ -7,18 +7,15 @@ import ReviewsSection from "../components/IndexPage/ReviewsSection/ReviewsSectio
 import PromoVideo from "../components/IndexPage/PromoVideo"
 import ClientsSection from "../components/IndexPage/ClientsSection/ClientsSection"
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <Seo title="Home page | Top forum 2021" />
-      <BannerSection />
-      <InfoSection />
-
-      <ReviewsSection />
-      <PromoVideo />
-      <ClientsSection />
-    </Layout>
-  )
-}
+const IndexPage = () => (
+  <Layout>
+    <Seo title="Home page | Top forum 2021" />
+    <BannerSection />
+    <InfoSection />
+    <ReviewsSection />
+    <PromoVideo />
+    <ClientsSection />
+  </Layout>
+)
 
 export default IndexPage

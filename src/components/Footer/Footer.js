@@ -3,59 +3,57 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import Container from "../UI/Container"
 
-const Footer = () => {
-  return (
-    <FooterStyled>
-      <Container>
-        <FooterNav>
-          <FooterNavInner>
-            <FooterNavBlock>
-              <FooterNavTitle>TOP FORUM</FooterNavTitle>
-              <ul>
-                <FooterNavItem>
-                  <Link to="/sponsors">Sponsors</Link>
-                </FooterNavItem>
-                <FooterNavItem>
-                  <Link to="/exhibitors">Exhibitors</Link>
-                </FooterNavItem>
-                <FooterNavItem>
-                  <Link to="speakers">Speakers</Link>
-                </FooterNavItem>
-                <FooterNavItem>
-                  <Link to="media">Media</Link>
-                </FooterNavItem>
-              </ul>
-            </FooterNavBlock>
-            <FooterNavBlock>
-              <FooterNavTitle>CONTACT</FooterNavTitle>
-              <ul>
-                <FooterNavItem>
-                  <Link to="/">Top Forum Group</Link>
-                </FooterNavItem>
-                <FooterNavItem>
-                  <AddressBlock>
-                    <Link to="/">Trnavska cesta 82, 821 02 Bratislava, Slovakia</Link>
-                  </AddressBlock>
-                </FooterNavItem>
-              </ul>
-              <ul style={{marginTop: "45px"}}>
-                <FooterNavItem>
-                  <a href="tel:+421221025322">+421 221 025 322</a>
-                </FooterNavItem>
-                <FooterNavItem>
-                  <EmailLink href="mailto:info@topforum.com">info@topforum.com</EmailLink>
-                </FooterNavItem>
-              </ul>
-            </FooterNavBlock>
-          </FooterNavInner>
-          <FollowButton type="button">FOLLOW US</FollowButton>
-        </FooterNav>
-        <Divider />
-        <p className="copyright">All rights reserved 2021. @anatoliiharhash</p>
-      </Container>
-    </FooterStyled>
-  )
-}
+const Footer = () => (
+  <FooterStyled>
+    <Container>
+      <FooterNav>
+        <FooterNavInner>
+          <FooterNavBlock>
+            <FooterNavTitle>TOP FORUM</FooterNavTitle>
+            <ul>
+              <FooterNavItem>
+                <Link to="/sponsors">Sponsors</Link>
+              </FooterNavItem>
+              <FooterNavItem>
+                <Link to="/exhibitors">Exhibitors</Link>
+              </FooterNavItem>
+              <FooterNavItem>
+                <Link to="speakers">Speakers</Link>
+              </FooterNavItem>
+              <FooterNavItem>
+                <Link to="media">Media</Link>
+              </FooterNavItem>
+            </ul>
+          </FooterNavBlock>
+          <FooterNavBlock>
+            <FooterNavTitle>CONTACT</FooterNavTitle>
+            <ul>
+              <FooterNavItem>
+                <Link to="/">Top Forum Group</Link>
+              </FooterNavItem>
+              <FooterNavItem>
+                <AddressBlock>
+                  <Link to="/">Trnavska cesta 82, 821 02 Bratislava, Slovakia</Link>
+                </AddressBlock>
+              </FooterNavItem>
+            </ul>
+            <ul style={{marginTop: "45px"}}>
+              <FooterNavItem>
+                <a href="tel:+421221025322">+421 221 025 322</a>
+              </FooterNavItem>
+              <FooterNavItem>
+                <EmailLink href="mailto:info@topforum.com">info@topforum.com</EmailLink>
+              </FooterNavItem>
+            </ul>
+          </FooterNavBlock>
+        </FooterNavInner>
+        <FollowButton type="button">FOLLOW US</FollowButton>
+      </FooterNav>
+      <Divider />
+      <p className="copyright">All rights reserved 2021. @anatoliiharhash</p>
+    </Container>
+  </FooterStyled>
+)
 
 const FooterStyled = styled.footer`
   padding: 45px 0;

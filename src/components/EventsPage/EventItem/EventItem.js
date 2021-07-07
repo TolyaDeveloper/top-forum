@@ -1,7 +1,7 @@
 import React from "react"
-import LinkStyled from "../../UI/Link"
 import styled from "styled-components"
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { PostLink } from "../../UI/Links"
 
 const EventItem = ({data, content, index}) => {
   const {eventTitle, eventTime, slug, ticketsAvailable, featuredImage} = data
@@ -20,7 +20,7 @@ const EventItem = ({data, content, index}) => {
         <AllEventsTitle>{eventTitle}</AllEventsTitle>
         <AllEventsTime>{eventTime}</AllEventsTime>
         <AllEventsContent dangerouslySetInnerHTML={{__html: content}} />
-        <LinkStyledEvents to={`/upcoming-events/${slug}`} $pale>Learn more</LinkStyledEvents>
+        <PostLink to={`/upcoming-events/${slug}`}>Learn more</PostLink>
       </div>
     </AllEventsItem>
   )
@@ -47,25 +47,21 @@ const AllEventsNoTickets = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotateZ(30deg);
   width: 215px;
   height: 55px;
   border: 3px solid #ec3e3e;
+  font-size: 30px;
+  font-weight: 900;
   text-align: center;
   line-height: 55px;
   text-transform: uppercase;
   color: #ec3e3e;
-  font-size: 30px;
-  font-weight: 900;
+  transform: translate(-50%, -50%) rotateZ(30deg);
   z-index: 10;
 `
 
-const LinkStyledEvents = styled(LinkStyled)`
-  padding: 15px 25px;
-`
-
 const AllEventsTitle = styled.h2`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 500;
   text-transform: uppercase;
 `

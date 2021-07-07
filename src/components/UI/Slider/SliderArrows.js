@@ -47,9 +47,9 @@ const PrevArrowButton = styled.button`
   position: absolute;
   top: 50%;
   left: -50px;
-  transform: translateY(-50%);
-  background-color: transparent;
   border: none;
+  background-color: transparent;
+  transform: translateY(-50%);
   cursor: pointer;
 `
 

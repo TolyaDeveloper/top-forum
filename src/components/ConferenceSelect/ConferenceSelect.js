@@ -2,21 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import dropdownArrow from '../../images/icons/select-arrow.png'
 
-const ConferenceSelect = ({topText, children}) => {
+const ConferenceSelect = ({topText, children, $width, $marginBottom}) => {
   return (
-    <ConferenceSelectStyled>
+    <ConferenceSelectStyled $marginBottom={$marginBottom}>
       {topText ? <ConferenceTopText>{topText}</ConferenceTopText> : null}
-      <SelectForm>
+      <SelectWrapper $width={$width}>
         <CustomSelect>
           {children}
         </CustomSelect>
-      </SelectForm>
+      </SelectWrapper>
     </ConferenceSelectStyled>
   )
 }
 
 const ConferenceSelectStyled = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: ${props => props.$marginBottom || "40px"};
+  width: 100%;
   text-align: center;
 `
 
@@ -27,9 +28,9 @@ const ConferenceTopText = styled.p`
   text-transform: uppercase;
 `
 
-const SelectForm = styled.form`
+const SelectWrapper = styled.div`
   position: relative;
-  width: 450px;
+  width: ${props => props.$width || "450px"};
   margin: 0 auto;
   &::before {
     content: '';

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import scrollImg from "../../images/icons/scroll-top.png"
+import ScrollImg from "../../images/icons/scroll-top.png"
 
 const ScrollTopBtn = () => {
   const handleTopScroll = () => {
@@ -9,7 +9,7 @@ const ScrollTopBtn = () => {
 
   return (
     <ScrollTopBtnStyled type="button" aria-label="scroll to top" onClick={handleTopScroll}>
-      <img src={scrollImg} alt="scroll to top" />
+      <img src={ScrollImg} alt="scroll to top" />
     </ScrollTopBtnStyled>
   )
 }
@@ -23,6 +23,16 @@ const ScrollTopBtnStyled = styled.button`
   border: none;
   cursor: pointer;
   z-index: 10;
+  
+  @media (max-width: 1700px) {
+    right: 50px;
+    top: auto;
+    bottom: 100px;
+  }
+  
+  @media (max-width: 767px) {
+    bottom: 50px;
+  }
 `
 
 export default ScrollTopBtn

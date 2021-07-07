@@ -3,13 +3,11 @@ import Layout from "../../components/Layout/Layout"
 import Seo from "../../components/Seo/Seo"
 import AllSpeakers from "../../components/SpeakersPage/AllSpeakers"
 
-const Index = () => {
-  return (
-    <Layout headerBorder>
-      <Seo title="Our all speakers | Top forum 2021" />
-      <AllSpeakers />
-    </Layout>
-  )
-}
+const Index = () => (
+  <Layout headerBorder>
+    <Seo title="Our all speakers | Top forum 2021" />
+    <AllSpeakers />
+  </Layout>
+)
 
 export default Index

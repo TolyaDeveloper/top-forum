@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Container from "../UI/Container"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import PageTopDescription from "../PageTopDescription/PageTopDescription"
 import ConferenceSelect from "../ConferenceSelect/ConferenceSelect"
 import GridRenderItem from "../GridRenderItem/GridRenderItem"

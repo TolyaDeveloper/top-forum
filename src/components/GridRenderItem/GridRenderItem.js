@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Link from "../UI/Link"
+import { Link } from "gatsby"
+import { PostLink } from "../UI/Links"
 
 const GridRenderItem = ({data, paragraph, relativePath}) => {
   const {slug, sponsorName, companyName, featuredImage, personName, articleTitle} = data
@@ -23,7 +24,7 @@ const GridRenderItem = ({data, paragraph, relativePath}) => {
       {articleTitle
         ? null
         : <div>
-            <GridLink to={`/${relativePath}/${slug}`} $pale>Learn more</GridLink>
+            <PostLink to={`/${relativePath}/${slug}`}>Learn more</PostLink>
           </div>}
     </GridItemStyled>
   )
@@ -65,18 +66,10 @@ const GridInfoText = styled.div`
   line-height: 1.5;
 `
 
-const GridLink = styled(Link)`
-  padding: 15px 25px;
-  &:hover {
-    background-color: #c99c47;
-  }
-`
-
 const GridArticleTitleLink = styled(Link)`
   margin-bottom: 15px;
   padding: 0;
   text-transform: uppercase;
-  background-color: transparent;
   color: #000;
   font-weight: 500;
   font-size: 18px;

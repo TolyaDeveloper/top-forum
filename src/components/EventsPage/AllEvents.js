@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Container from "../UI/Container"
 import PageTopDescription from "../PageTopDescription/PageTopDescription"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import EventItem from "./EventItem/EventItem"
 
 const AllEvents = () => {

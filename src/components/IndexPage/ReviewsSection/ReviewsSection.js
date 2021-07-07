@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Title from "../../UI/Title"
 import Container from "../../UI/Container"
 import Slider from "react-slick"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import ReviewsSlide from "./ReviewsSlide/ReviewsSlide"
 import { NextArrow, PrevArrow } from "../../UI/Slider/SliderArrows"
 

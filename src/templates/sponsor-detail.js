@@ -52,9 +52,9 @@ const SponsorDetailInner = styled.div`
 `
 
 const SponsorDetailTitle = styled.h2`
+  margin-bottom: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 20px;
 `
 
 const SponsorDetailText = styled.div`

@@ -1,19 +1,32 @@
-import React from "react"
-import {Link} from "gatsby"
+import React, { useState } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Container from "../UI/Container"
-import LinkStyled from "../UI/Link"
-import {StaticImage} from "gatsby-plugin-image"
+import { HeaderTopLink, RegisterLink } from "../UI/Links"
+import { StaticImage } from "gatsby-plugin-image"
 import Logo from "../UI/Logo"
 import NestedSponsorsBlock from "./NestedSponsorsBlock/NestedSponsorsBlock"
+import HeaderMobilePopup from "./HeaderMobilePopup/HeaderMobilePopup"
 
 const Header = ({headerBorder}) => {
+  const [popupVisibility, setPopupVisibility] = useState(false)
+
+  const changeVisibility = () => {
+    setPopupVisibility(!popupVisibility)
+  }
+
   return (
     <header>
+      {popupVisibility ? <HeaderMobilePopup changeVisibility={changeVisibility} /> : null}
       <HeaderTop>
         <Container>
           <HeaderTopInner>
             <nav>
+              <BurgerBtn type="button" aria-label="click to open menu" onClick={changeVisibility}>
+                <span />
+                <span />
+                <span />
+              </BurgerBtn>
               <NavList>
                 <NavItem>
                   <Link to="/sponsors" activeStyle={activeStyles} partiallyActive={true}>Sponsors</Link>
@@ -30,7 +43,7 @@ const Header = ({headerBorder}) => {
                 </NavItem>
               </NavList>
             </nav>
-            <TopHeaderLink $fixed to="/upcoming-events">TOP FORUM CLUB</TopHeaderLink>
+            <HeaderTopLink to="/upcoming-events">TOP FORUM CLUB</HeaderTopLink>
           </HeaderTopInner>
         </Container>
       </HeaderTop>
@@ -64,7 +77,7 @@ const Header = ({headerBorder}) => {
                 </HeaderBottomItem>
               </HeaderBottomList>
             </HeaderBottomInfo>
-            <LinkStyled $fixed to="/register">REGISTER NOW</LinkStyled>
+            <RegisterLink to="/register">REGISTER NOW</RegisterLink>
           </HeaderBottomInner>
         </Container>
       </HeaderBottom>
@@ -83,10 +96,40 @@ const HeaderTopInner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: 800px) {
+    min-height: 70px;
+  }
 `
 
 const NavList = styled.ul`
   display: flex;
+  
+  @media (max-width: 800px) {
+    display: none;
+  }
+`
+
+const BurgerBtn = styled.button`
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: #c99c47;
+  }
+  
+  @media (max-width: 800px) {
+    display: flex;
+  }
 `
 
 const activeStyles = {
@@ -125,11 +168,6 @@ const NavItem = styled.li`
   }
 `
 
-const TopHeaderLink = styled(LinkStyled)`
-  background-color: #e8d8b6;
-  color: #323232;
-`
-
 const HeaderBottom = styled.div`
   ${props => props.headerBorder &&`
     border-bottom: 1px solid #d6d6d6;
@@ -141,6 +179,10 @@ const HeaderBottomInner = styled.div`
   justify-content: space-between;
   align-items: center;
   min-height: 95px;
+  
+  @media (max-width: 800px) {
+    justify-content: space-between;
+  }
 `
 
 const HeaderBottomInfo = styled.div`
@@ -151,6 +193,10 @@ const HeaderBottomInfo = styled.div`
 const HeaderBottomList = styled.ul`
   display: flex;
   margin-left: 45px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 const HeaderBottomItem = styled.li`
