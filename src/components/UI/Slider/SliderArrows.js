@@ -51,6 +51,7 @@ const PrevArrowButton = styled.button`
   background-color: transparent;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 5;
 `
 
 const NextArrowButton = styled(PrevArrowButton)`

@@ -29,6 +29,29 @@ const ReviewsSlide = ({data}) => {
 const ReviewsItem = styled.div`
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
+  
+  img {
+    width: 121px;
+    height: 121px;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 0 40px;
+  }
+  
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
+  
+  @media (max-width: 575px) {
+    flex-direction: column;
+    align-items: center;
+    
+    img {
+      margin-bottom: 30px;
+    }
+  }
 `
 
 const ReviewsImageStyles = {
@@ -55,6 +78,20 @@ const ReviewsCommentBlock = styled.div`
     border-bottom: 25px solid transparent;
     border-right: 25px solid #fff;
   }
+  
+  @media (max-width: 1300px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 575px) {
+    margin-left: 0;
+    
+    &::before {
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%) rotateZ(90deg);
+    }
+  }
 `
 
 const ReviewsCommentName = styled.h4`
@@ -80,6 +117,10 @@ const ReviewsDateLabel = styled.time`
 const ReviewsQuote = styled.blockquote`
   margin: 0;
   text-align: justify;
+  
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
 `
 
 export default ReviewsSlide

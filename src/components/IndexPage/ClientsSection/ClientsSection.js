@@ -5,7 +5,7 @@ import Slider from "react-slick"
 import Container from "../../UI/Container"
 import { graphql, useStaticQuery } from "gatsby"
 import ClientItem from "./ClientItem/ClientItem"
-import {NextArrow, PrevArrow} from "../../UI/Slider/SliderArrows"
+import { NextArrow, PrevArrow } from "../../UI/Slider/SliderArrows"
 
 const ClientsSection = () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +34,20 @@ const ClientsSection = () => {
     slidesToScroll: 1,
     nextArrow: <NextArrow $color="#c99c47" />,
     prevArrow: <PrevArrow $color="#c99c47" />,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   }
 
   return (
@@ -53,6 +67,16 @@ const ClientsSection = () => {
 const ClientsSectionStyled = styled.section`
   padding: 45px 0 70px 0;
   background-color: #f8f3e9;
+  
+  @media (max-width: 1300px) {
+    .slick-next {
+      right: 0;
+    }
+    
+    .slick-prev {
+      left: 0;
+    }
+  }
 `
 
 const ClientsSectionTitle = styled(Title)`

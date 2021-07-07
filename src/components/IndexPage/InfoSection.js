@@ -121,6 +121,11 @@ const ContentText = styled.p`
   font-size: 17px;
   line-height: 1.76;
   text-align-last: center;
+  
+  @media (max-width: 767px) {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
 `
 
 const InfoInner = styled.div`
@@ -129,6 +134,17 @@ const InfoInner = styled.div`
   grid-template-rows: minmax(450px, auto);
   column-gap: 30px;
   margin-bottom: 40px;
+  
+  @media (max-width: 1050px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  
+  @media (max-width: 767px) {
+    grid-template-columns: minmax(auto, 400px);
+    grid-template-rows: auto;
+    justify-content: center;
+  }
 `
 
 const InfoCart = styled.div`
@@ -136,6 +152,13 @@ const InfoCart = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  
+  @media (max-width: 767px) {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
 `
 
 const InfoImgStyles = {
@@ -154,6 +177,10 @@ const InfoText = styled.p`
   text-align-last: center;
   font-size: 15px;
   line-height: 1.6;
+  
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 `
 
 const PostLinkStyled = styled(PostLink)`
@@ -173,6 +200,14 @@ const InfoBottomAnnouncer = styled.p`
 const InfoButtonsInner = styled.div`
   display: flex;
   justify-content: center;
+  
+  @media (max-width: 400px) {
+    flex-direction: column;
+    
+    ${RegisterLinkStyled} {
+      margin: 0 0 15px 0;
+    }
+  }
 `
 
 export default InfoSection

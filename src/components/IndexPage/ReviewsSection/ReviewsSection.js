@@ -20,7 +20,6 @@ const ReviewsSection = () => {
               childImageSharp {
                 gatsbyImageData(
                   quality: 85
-                  layout: FIXED
                   height: 121
                   width: 121
                   placeholder: BLURRED
@@ -41,6 +40,14 @@ const ReviewsSection = () => {
     infinite: false,
     nextArrow: <NextArrow $color="#c99c47" />,
     prevArrow: <PrevArrow $color="#c99c47" />,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   }
 
   return (
@@ -64,6 +71,16 @@ const ReviewsSection = () => {
 const ReviewsSectionStyled = styled.section`
   padding: 55px 0 60px 0;
   background-color: #f8f3e9;
+  
+  @media (max-width: 1300px) {
+    .slick-prev {
+      left: 0;
+    }
+    
+    .slick-next {
+      right: 0;
+    }
+  }
 `
 
 const ReviewsSectionTitle = styled(Title)`

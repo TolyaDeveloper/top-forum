@@ -64,6 +64,10 @@ const FooterNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: start;
+  
+  @media (max-width: 575px) {
+    flex-direction: column-reverse;
+  }
 `
 
 const FooterNavInner = styled.div`
@@ -83,6 +87,14 @@ const FooterNavBlock = styled.div`
       width: 1px;
       height: calc(100% + 50px);
       background-color: #464645;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    padding-right: 20px;
+    
+    & + & {
+      padding-left: 20px;
     }
   }
 `
@@ -116,6 +128,10 @@ const FollowButton = styled.button`
   transition: opacity 0.2s ease-in;
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 40px;
   }
 `
 

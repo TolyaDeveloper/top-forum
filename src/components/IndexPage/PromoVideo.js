@@ -27,10 +27,15 @@ const PromoTitle = styled(Title)`
 
 const PromoVideoIframe = styled.iframe`
   display: block;
-  width: 680px;
+  max-width: 680px;
+  width: 100%;
   height: 400px;
   margin: 0 auto;
   border: 0;
+  
+  @media (max-width: 575px) {
+    height: 300px;
+  }
 `
 
 export default PromoVideo

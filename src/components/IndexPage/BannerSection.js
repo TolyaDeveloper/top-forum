@@ -91,6 +91,10 @@ const PresentationWrapper = styled.div`
   width: 430px;
   min-height: 180px;
   border: 1px solid #fff;
+  
+  @media (max-width: 575px) {
+    display: none;
+  }
 `
 
 const PresentationItem = styled.div`
