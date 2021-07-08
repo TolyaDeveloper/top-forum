@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Container from "../UI/Container"
 import { StaticImage } from "gatsby-plugin-image"
@@ -13,7 +13,9 @@ const InfoSection = () => {
     setModalVisibility(!modalVisibility)
   }
 
-  modalVisibility ? document.body.style.overflow = "hidden": document.body.style.overflow = "visible"
+  useEffect(() => {
+    modalVisibility ? document.body.style.overflow = "hidden": document.body.style.overflow = "visible"
+  }, )
 
   return (
     <React.Fragment>

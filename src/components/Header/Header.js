@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Container from "../UI/Container"
 import { HeaderTopLink, RegisterLink } from "../UI/Links"
@@ -14,7 +14,9 @@ const Header = ({headerBorder}) => {
     setPopupVisibility(!popupVisibility)
   }
 
-  popupVisibility ? document.body.style.overflow = "hidden": document.body.style.overflow = "visible"
+  useEffect(() => {
+    popupVisibility ? document.body.style.overflow = "hidden": document.body.style.overflow = "visible"
+  }, )
 
   return (
     <header>
