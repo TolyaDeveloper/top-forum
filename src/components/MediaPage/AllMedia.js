@@ -67,6 +67,11 @@ const AllSponsorsInner = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 55px 30px;
+  
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    justify-content: center;
+  }
 `
 
 export default AllSponsors

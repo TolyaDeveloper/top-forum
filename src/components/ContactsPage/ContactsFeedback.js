@@ -49,10 +49,18 @@ const ContactsFeedbackStyled = styled.section`
 
 const ContactsFeedbackTitle = styled(Title)`
   margin-bottom: 40px;
+  
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 `
 
 const ContactsFeedbackInner = styled.div`
   display: flex;
+  
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 `
 
 const ContactsFeedbackForm = styled.form`
@@ -66,6 +74,10 @@ const ContactsFeedbackForm = styled.form`
   
   textarea, input {
     border: 1px solid #e8d8b6;
+  }
+  
+  @media (max-width: 767px) {
+    width: 100%;
   }
 `
 
@@ -87,6 +99,10 @@ const ContactsInputWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  
+  @media (max-width: 440px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const ContactsInput = styled.input`
@@ -118,6 +134,10 @@ const ContactsFeedbackAdditional = styled.div`
     a {
       text-decoration: underline;
     }
+  }
+  
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
   }
 `
 

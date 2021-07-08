@@ -30,7 +30,7 @@ const ConferenceTopText = styled.p`
 
 const SelectWrapper = styled.div`
   position: relative;
-  width: ${props => props.$width || "450px"};
+  max-width: ${props => props.$width || "450px"};
   margin: 0 auto;
   &::before {
     content: '';

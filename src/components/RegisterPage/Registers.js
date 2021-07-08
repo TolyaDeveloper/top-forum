@@ -185,12 +185,20 @@ const RegistersInput = styled.input`
   flex-grow: 1;
   height: 50px;
   border: 1px solid #e8d8b6;
+  
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 const RegistersLabel = styled.label`
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 
 const RegistersLabelText = styled.span`
@@ -198,6 +206,10 @@ const RegistersLabelText = styled.span`
   flex-shrink: 0;
   color: #606060;
   font-weight: 500;
+  
+  @media (max-width: 500px) {
+    margin-bottom: 15px;
+  }
 `
 
 const RegisterBottom = styled.div`

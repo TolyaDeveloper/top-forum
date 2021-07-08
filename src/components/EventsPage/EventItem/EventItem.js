@@ -31,6 +31,10 @@ const AllEventsItem = styled.div`
   align-items: center;
   padding-bottom: 25px;
   
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  
   ${props => props.index !== 0 &&`
     padding-top: 25px;
     border-top: 1px solid #d6d6d6;
@@ -41,6 +45,10 @@ const AllEventsImageWrapper = styled.div`
   position: relative;
   flex-shrink: 0;
   margin-right: 30px;
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
 `
 
 const AllEventsNoTickets = styled.div`
@@ -64,6 +72,10 @@ const AllEventsTitle = styled.h2`
   margin-bottom: 10px;
   font-weight: 500;
   text-transform: uppercase;
+  
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
 `
 
 const AllEventsTime = styled.p`

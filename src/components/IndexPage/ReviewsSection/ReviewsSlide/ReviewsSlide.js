@@ -30,6 +30,7 @@ const ReviewsItem = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-right: 20px;
   
   img {
     width: 121px;
@@ -38,6 +39,7 @@ const ReviewsItem = styled.div`
 
   @media (max-width: 1300px) {
     padding: 0 40px;
+    margin-right: 0;
   }
   
   @media (max-width: 1100px) {

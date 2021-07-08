@@ -18,10 +18,10 @@ const Footer = () => (
                 <Link to="/exhibitors">Exhibitors</Link>
               </FooterNavItem>
               <FooterNavItem>
-                <Link to="speakers">Speakers</Link>
+                <Link to="/speakers">Speakers</Link>
               </FooterNavItem>
               <FooterNavItem>
-                <Link to="media">Media</Link>
+                <Link to="/media">Media</Link>
               </FooterNavItem>
             </ul>
           </FooterNavBlock>
@@ -68,10 +68,18 @@ const FooterNav = styled.nav`
   @media (max-width: 575px) {
     flex-direction: column-reverse;
   }
+  
+  @media (max-width: 500px) {
+    align-items: center;
+  }
 `
 
 const FooterNavInner = styled.div`
   display: flex;
+  
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 
 const FooterNavBlock = styled.div`
@@ -95,6 +103,16 @@ const FooterNavBlock = styled.div`
     
     & + & {
       padding-left: 20px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    padding-right: 0;
+    & + & {
+      padding-left: 0;
+    }
+    &::before {
+      display: none;
     }
   }
 `

@@ -45,6 +45,16 @@ const MapContactsStyled = styled.section`
 
 const MapContactsInner = styled.div`
   display: flex;
+  
+  @media (max-width: 575px) {
+    flex-direction: column;
+    
+    iframe {
+      margin-bottom: 30px;
+      width: 100%;
+      height: 350px;
+    }
+  }
 `
 
 const Address = styled.address`

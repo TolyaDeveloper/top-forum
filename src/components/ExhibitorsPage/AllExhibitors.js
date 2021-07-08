@@ -64,7 +64,7 @@ const AllSponsorsStyled = styled.section`
 
 const AllSponsorsInner = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
   grid-template-rows: repeat(2, minmax(320px, auto));
   grid-auto-rows: minmax(320px, auto);
   gap: 70px 30px;

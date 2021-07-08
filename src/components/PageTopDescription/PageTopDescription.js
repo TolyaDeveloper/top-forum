@@ -19,6 +19,10 @@ const PageTopParagraph = styled.p`
   text-align-last: center;
   font-size: 17px;
   line-height: 1.76;
+  
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
 `
 
 export default PageTopDescription

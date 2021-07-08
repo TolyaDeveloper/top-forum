@@ -83,6 +83,10 @@ const PresentationBg = styled(BgImage)`
   flex-direction: column;
   min-height: 440px;
   z-index: 1;
+  
+  @media (max-width: 767px) {
+    min-height: 350px;
+  }
 `
 
 const PresentationWrapper = styled.div`

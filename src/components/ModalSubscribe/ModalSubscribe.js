@@ -40,13 +40,16 @@ const ModalSubscribeStyled = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
 `
 
 const ModalBox = styled.div`
   position: relative;
-  margin: 200px auto 0 auto;
+  margin: 0 30px;
   padding: 40px 30px 25px 30px;
   width: 420px;
   min-height: 370px;

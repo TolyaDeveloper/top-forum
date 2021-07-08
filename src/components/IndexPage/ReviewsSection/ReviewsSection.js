@@ -40,6 +40,7 @@ const ReviewsSection = () => {
     infinite: false,
     nextArrow: <NextArrow $color="#c99c47" />,
     prevArrow: <PrevArrow $color="#c99c47" />,
+    centerPadding: "50px",
     responsive: [
       {
         breakpoint: 1100,
